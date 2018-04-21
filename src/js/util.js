@@ -6,8 +6,8 @@ var txtInput = document.getElementById('resultado');
 txtInput.value = '0';
 
 function definirOperacao(valor) {
-    calcular();
     operacao = valor;
+    calcular();
 }
 
 function adicionarNumero(numero) {        
