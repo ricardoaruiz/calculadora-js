@@ -2,7 +2,7 @@ var Calculadora = {
     adicionar: (num1, num2) => {
 
         if(isNaN(num1) || isNaN(num2)) {
-            return 0;
+            throw new Error('Valores informados inválidos');
         }
 
         num1 = parseFloat(num1);
@@ -12,12 +12,18 @@ var Calculadora = {
     },
     subtrair: (num1, num2) => {
         if (isNaN(num1) || isNaN(num2)) {
-            return 0;
+            throw new Error('Valores informados inválidos');
         }
         return num1 - num2;
     },
     dividir: (num1, num2) => {
-        return 0;
+        if (isNaN(num1) || isNaN(num2)) {
+            throw new Error('Valores informados inválidos');
+        }
+        if (num2 == 0) {
+            throw new Error('Divisão por zero');
+        }
+        return num1 / num2;
     },
     multiplicar: (num1, num2) => {
         return 0;

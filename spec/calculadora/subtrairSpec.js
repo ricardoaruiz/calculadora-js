@@ -18,12 +18,12 @@ describe('Suite de testes de subtração', () => {
         expect(calculadora.subtrair(5.5, 2.5)).toEqual(3);
     });
 
-    it('deve retornar 0 para valor1 não numérico', () => {
-        expect(calculadora.subtrair(undefined, 2)).toEqual(0);
+    it('deve retornar exceção para valor1 não numérico', () => {
+        expect(() => {calculadora.subtrair(undefined, 2)}).toThrowError('Valores informados inválidos');
     });
 
-    it('deve retornar 0 para valor2 não numérico', () => {
-        expect(calculadora.subtrair(3, undefined)).toEqual(0);
+    it('deve retornar exceção para valor2 não numérico', () => {
+        expect(() => {calculadora.subtrair(3, undefined)}).toThrowError('Valores informados inválidos');
     });
 
 });

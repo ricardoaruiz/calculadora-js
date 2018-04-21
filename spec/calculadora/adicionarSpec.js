@@ -14,12 +14,12 @@ describe('Suite de testes de adição', () => {
         expect(calculadora.adicionar(1.5, 3)).toEqual(4.5);
     });
 
-    it('deve retornar 0 quando valor1 não for numérico', () => {
-        expect(calculadora.adicionar(undefined, 2)).toEqual(0);
+    it('deve retornar exceção quando valor1 não for numérico', () => {
+        expect(() => {calculadora.adicionar(undefined, 2)}).toThrowError('Valores informados inválidos');
     });
 
-    it('deve retornar 0 quando valor2 não for numérico', () => {
-        expect(calculadora.adicionar(2, undefined)).toEqual(0);
+    it('deve retornar exceção quando valor2 não for numérico', () => {
+        expect(() => {calculadora.adicionar(2, undefined)}).toThrowError('Valores informados inválidos');
     });
 
 });
