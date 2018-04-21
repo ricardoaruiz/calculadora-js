@@ -23,7 +23,7 @@ describe('Suite de testes de subtração', () => {
     });
 
     it('deve retornar 0 para valor2 não numérico', () => {
-        expect(calculadora.subtrair(3, undefined)).toEqual(1);
+        expect(calculadora.subtrair(3, undefined)).toEqual(0);
     });
 
 });
