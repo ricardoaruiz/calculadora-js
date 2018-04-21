@@ -26,7 +26,10 @@ var Calculadora = {
         return num1 / num2;
     },
     multiplicar: (num1, num2) => {
-        return 0;
+        if (isNaN(num1) || isNaN(num2)) {
+            throw new Error('Valores informados inválidos');
+        }
+        return num1 * num2;
     }
 };
 
